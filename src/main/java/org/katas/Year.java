@@ -8,9 +8,17 @@ public class Year {
     }
 
     public boolean isLeap() {
-        if (year % 100 == 0 && year % 400 != 0) {
+        if (divisibleBy(100) && notDivisibleBy(400)) {
             return false;
         }
-        return year % 4 == 0;
+        return divisibleBy(4);
+    }
+
+    private boolean notDivisibleBy(int number) {
+        return year % number != 0;
+    }
+
+    private boolean divisibleBy(int number) {
+        return year % number == 0;
     }
 }
