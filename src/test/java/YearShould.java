@@ -20,6 +20,11 @@ public class YearShould {
         assertTrue(leapYear(1600));
     }
 
+    @Test
+    public void return_false_if_divisible_by_100_but_not_by_400() {
+        assertFalse(leapYear(1800));
+    }
+
     private boolean leapYear(int year) {
         return new Year(year).isLeap();
     }
