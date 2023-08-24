@@ -16,4 +16,10 @@ public class YearShould {
         Year year = new Year(1996);
         assertTrue(year.isLeap());
     }
+
+    @Test
+    public void return_true_if_divisible_by_400() {
+        Year year = new Year(1600);
+        assertTrue(year.isLeap());
+    }
 }
